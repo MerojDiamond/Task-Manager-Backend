@@ -10,6 +10,7 @@ class CreateUpdateTask extends MainRequest
     {
         return [
             "user_id" => "required|exists:users,id",
+            "project_id" => "required|exists:projects,id",
             "name" => "required|string",
             "description" => "string",
             "status" => "string|in:backlog,wip,done,canceled",
